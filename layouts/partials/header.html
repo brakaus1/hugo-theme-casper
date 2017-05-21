@@ -34,7 +34,6 @@
 	  <link rel="apple-touch-icon" href="{{.Site.BaseURL}}images/apple-touch-icon.png" />
 
     <link rel="stylesheet" type="text/css" href="{{.Site.BaseURL}}css/screen.css" />
-    <link rel="stylesheet" type="text/css" href="{{.Site.BaseURL}}css/nav.css" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
 
 
@@ -58,19 +57,33 @@
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
       ga('create', '{{.}}', 'auto');
       ga('send', 'pageview');
-
     </script>
     {{end}}
+    <link href="{{.Site.BaseURL}}dist/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    {{ if .Site.Params.customHeaderPartial }}
-        {{ partial .Site.Params.customHeaderPartial . }}
-    {{ end }}
+    <!-- Theme CSS -->
+    <link href="{{.Site.BaseURL}}site-assets/freelancer.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{{.Site.BaseURL}}dist/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+
+    <script src="{{.Site.BaseURL}}dist/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{.Site.BaseURL}}dist/bootstrap/js/bootstrap.min.js"></script>
+
+
+    <link href="{{.Site.BaseURL}}site-assets/site.css?v=-" rel="stylesheet" />
+    <link href="{{.Site.BaseURL}}dist/default-skin/default-skin.css?v=-" rel="stylesheet" />
+
 </head>
 <body class="nav-closed">
 
   {{ partial "navigation.html" . }}
 
- <div class="site-wrapper">
+<div class="site-wrapper">

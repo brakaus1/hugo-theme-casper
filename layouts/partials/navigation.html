@@ -1,23 +1,33 @@
-<div class="nav">
-    <h3 class="nav-title">Menu</h3>
-    <a href="#" class="nav-close">
-        <span class="hidden">Close</span>
-    </a>
-    <ul>
-        {{ $currentNode := . }}
-        
-        {{ range .Site.Menus.main }}
-            {{.Pre}}
-            <li class="nav-opened{{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .)}} nav-current{{end}}" role="presentation">
-            	<a href="{{.URL}}">{{.Name}}</a>
-            </li>
-        {{end}}
-    </ul>
-    
-    {{ if .Site.Params.RSSLink}}
-    <a class="subscribe-button icon-feed" href="{{.Site.Params.RSSLink }}">Subscribe</a> </div>
-    {{else}}
-    <a class="subscribe-button icon-feed" href="{{if .IsNode}}{{.RSSLink}}{{else}}{{ .Site.BaseURL }}index.xml{{end}}">Subscribe</a>
-    {{end}}
-</div>
-<span class="nav-cover"></span>
+<nav id="mainNav" style="padding: 0;" class="navbar navbar-default navbar-fixed-top navbar-custom">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand" href="www.victorbrakauskas.com">Victor's stuff</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="hidden">
+                    <a href="#page-top"></a>
+                </li>
+                <li>
+                    <a href="#about">About</a>
+                </li>
+                <li class="page-scroll">
+                    <a href="photos.victorbrakauskas.com">Photos</a>
+                </li>
+                <li>
+                    <a href="blog.victorbrakauskas.com">Tech things</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+<div class="row"></div>
