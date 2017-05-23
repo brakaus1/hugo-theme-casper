@@ -1,5 +1,6 @@
 {{ partial "header.html" . }}
 {{ $baseurl := .Site.BaseURL }}
+{{ $photourl := .Site.Params.PhotoURL }}
 
 
 
@@ -8,7 +9,8 @@
 <main class="content" role="main">
 
 
-
+<header class="main-header post-head" style="background-image: url({{.Site.Params.photourl}}{{.Params.image}})">
+</header>
 
   <article class="post {{ .Section }}">
 
